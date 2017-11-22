@@ -1,2 +1,3 @@
 # ProjetAndroid
-Répository pour le cours d'android
+Etudiant : Alexis ROSSAT
+Utilisation de git en ligne de commande
