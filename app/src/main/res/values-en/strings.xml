@@ -7,4 +7,16 @@
     <string name="_1vsIa">1 vs IA</string>
     <string name="_AvsB">Team 1 vs Team B</string>
     <string name="_1vs1Online">1 vs 1 online</string>
+
+    <string name="Team">Team</string>
+    <string name="Player">Player</string>
+    <string name="Life">Life</string>
+    <string name="Score">Score</string>
+    <string name="Value">Value</string>
+
+    <string name="Question">What animal is this cry ? </string>
+    <string name="Dog">Dog</string>
+    <string name="Cat">Cat</string>
+    <string name="Horse">Horse</string>
+    <string name="Cow">Cow</string>
 </resources>
