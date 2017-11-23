@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.epulapp.projetandroid.QuestionActivity">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_middle"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guidelineLeft"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guidelineRight"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"  />
+
+
+    <!--Textes-->
+    <TextView
+        android:id="@+id/TxtTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Team"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/marginLeftShort"
+        android:layout_marginTop="@dimen/marginShort"/>
+
+    <TextView
+        android:id="@+id/TxtPlayeur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Player"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@id/TxtTeam"
+        android:layout_marginLeft="@dimen/marginLeftShort"
+        android:layout_marginTop="@dimen/marginShort" />
+
+    <TextView
+        android:id="@+id/TxtLife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Life"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+        android:layout_marginLeft="@dimen/marginLeftShort"
+        android:layout_marginTop="@dimen/marginShort" />
+
+    <TextView
+        android:id="@+id/TxtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Score"
+        app:layout_constraintTop_toTopOf="@id/TxtLife"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+        android:layout_marginLeft="@dimen/marginLeftShort"
+        android:layout_marginTop="@dimen/marginShort" />
+
+
+    <TextView
+        android:id="@+id/TxtQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Question"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/textMiddleSize"
+        app:layout_constraintTop_toTopOf="@id/TxtScore"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+
+        android:layout_marginTop="@dimen/marginShort" />
+
+    <!--Elements-->
+
+    <ImageView
+        android:id="@+id/imageVolumeUp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/marginShort"
+        app:srcCompat="@drawable/ic_volume_up"
+        android:layout_marginLeft="@dimen/marginMeddium"
+        android:layout_marginTop="@dimen/marginShort"
+
+        app:layout_constraintTop_toBottomOf="@id/TxtQuestion"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+        />
+
+    <SeekBar
+        android:id="@+id/musiquePlayer"
+        style="@android:style/Widget.Material.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/marginShort"
+        android:layout_marginRight="@dimen/marginMeddium"
+        android:layout_marginTop="@dimen/marginShort"
+        android:background="@color/lightGrey"
+
+        app:layout_constraintLeft_toRightOf="@id/imageVolumeUp"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@id/TxtQuestion" />
+
+    <!--Boutons-->
+    <Button
+        android:id="@+id/BtnBottomLeft"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btnHeight"
+        android:text="@string/Horse"
+        android:background="@color/btnBlueBackground"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/marginShort"
+        app:layout_constraintLeft_toLeftOf="@+id/guidelineLeft"
+        app:layout_constraintRight_toRightOf="@id/guideline_middle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="@dimen/marginVeryShort" />
+
+    <Button
+        android:id="@+id/BtnBottomRight"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btnHeight"
+        android:text="@string/Cow"
+        android:background="@color/btnBlueBackground"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/marginShort"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_middle"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/marginVeryShort"
+ />
+
+    <Button
+        android:id="@+id/BtnTopLeft"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btnHeight"
+        android:text="@string/Dog"
+        android:background="@color/btnBlueBackground"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/marginVerySmall"
+        app:layout_constraintLeft_toLeftOf="@+id/guidelineLeft"
+        app:layout_constraintRight_toRightOf="@id/guideline_middle"
+        app:layout_constraintBottom_toTopOf="@id/BtnBottomLeft"
+        android:layout_marginRight="@dimen/marginVeryShort"
+         />
+
+    <Button
+        android:id="@+id/BtnTopRight"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btnHeight"
+        android:text="@string/Cat"
+        android:background="@color/btnBlueBackground"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/marginVerySmall"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_middle"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+        app:layout_constraintBottom_toTopOf="@id/BtnBottomRight"
+        android:layout_marginLeft="@dimen/marginVeryShort"/>
+
+    <!--Elements-->
+    <ProgressBar
+        android:id="@+id/ProgressBarTime"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginVerySmall"
+        android:progress="60"
+        app:layout_constraintBottom_toTopOf="@id/BtnTopLeft"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight" />
+
+    <TextView
+        android:id="@+id/TxtValeur"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Value"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/textMiddleSize"
+        app:layout_constraintBottom_toTopOf="@+id/ProgressBarTime"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+
+        android:layout_marginBottom="@dimen/marginVeryShort" />
+
+
+
+</android.support.constraint.ConstraintLayout>

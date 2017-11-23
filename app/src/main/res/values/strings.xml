@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">ProjetAndroid</string>
+    <string name="Online">En ligne</string>
+    <string name="Offline">Hors ligne</string>
+    <string name="_1vs1">1 contre 1</string>
+    <string name="_1vsIa">contre l\'IA</string>
+    <string name="_AvsB">Equipe A contre equipe B</string>
+    <string name="_1vs1Online">1 contre 1 en ligne</string>
+
+    <string name="Team">Equipe</string>
+    <string name="Player">Joueur</string>
+    <string name="Life">Vies</string>
+    <string name="Score">Score</string>
+    <string name="Value">Valeur</string>
+
+    <string name="Question">De quel animal est-ce le cri ? </string>
+    <string name="Dog">Chien</string>
+    <string name="Cat">Chat</string>
+    <string name="Horse">Cheval</string>
+    <string name="Cow">Vache</string>
+
+
 </resources>

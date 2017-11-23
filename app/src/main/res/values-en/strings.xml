@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProjetAndroid</string>
+    <string name="Online">Online</string>
+    <string name="Offline">Offline</string>
+    <string name="_1vs1">1 vs 1</string>
+    <string name="_1vsIa">1 vs IA</string>
+    <string name="_AvsB">Team 1 vs Team B</string>
+    <string name="_1vs1Online">1 vs 1 online</string>
+</resources>

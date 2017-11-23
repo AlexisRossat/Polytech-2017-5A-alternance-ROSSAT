@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginVeryShort">2.5dp</dimen>
+    <dimen name="marginVerySmall">5dp</dimen>
+    <dimen name="marginLittle">10dp</dimen>
+    <dimen name="marginShort">20dp</dimen>
+    <dimen name="marginTopLong">80dp</dimen>
+    <dimen name="marginMeddium">40dp</dimen>
+    <dimen name="marginLeftShort">15dp</dimen>
+
+    <dimen name="textMiddleSize">25dp</dimen>
+    <dimen name="btnHeight">40dp</dimen>
+
+
+
+</resources>
