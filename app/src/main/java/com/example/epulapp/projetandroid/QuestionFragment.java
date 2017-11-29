@@ -29,13 +29,6 @@ public class QuestionFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Intent intent = new Intent();
-        intent.setAction("android.intent.action.BROADCAST_NOTIF");
-        intent.putExtra("data","Notice me senpai!");
-        //LocalBroadcastManager.getInstance(getContext()).sendBroadcast(intent);
-        getContext().sendBroadcast(intent);
-
-
         return inflater.inflate(R.layout.fragment_question, container, false);
     }
 
@@ -53,6 +46,11 @@ public class QuestionFragment extends Fragment {
     public void onResume() {
         super.onResume();
         Log.d("DEBUG_PROJET", "On resume");
+
+        Intent intent = new Intent();
+        intent.setAction("android.intent.action.BROADCAST_NOTIF");
+        intent.putExtra("data","Notice me senpai!");
+        getContext().sendBroadcast(intent);
     }
 
     @Override

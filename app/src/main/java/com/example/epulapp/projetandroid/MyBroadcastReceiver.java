@@ -23,8 +23,10 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 
         NotificationManager mNotification = (NotificationManager) context.getSystemService(context.NOTIFICATION_SERVICE);
 
+
+
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context)
-                        .setSmallIcon(R.drawable.ic_volume_up)
+                        .setSmallIcon(R.drawable.ic_rowing_black_24dp)
                         .setContentTitle("My notification")
                         .setContentText("Hello World!");
 
