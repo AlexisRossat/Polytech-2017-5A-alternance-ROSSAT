@@ -8,11 +8,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener, HomeActivityCallback {
+public class HomeActivity extends AppCompatActivity implements HomeActivityCallback {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
-        Log.d("onCreate", "onCreate");
+        Log.d("DEBUG_PROJET", "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
@@ -24,44 +24,39 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View view) {
-        Log.d("onClick", "onClick");
-    }
-
-    @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("Destroy", "Destroy");
+        Log.d("DEBUG_PROJET", "Destroy");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("Start", "Start");
+        Log.d("DEBUG_PROJET", "Start");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("Resume", "Resume");
+        Log.d("DEBUG_PROJET", "Resume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("Pause", "Pause");
+        Log.d("DEBUG_PROJET", "Pause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("Stop", "Stop");
+        Log.d("DEBUG_PROJET", "Stop");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d("Restart", "Restart");
+        Log.d("DEBUG_PROJET", "Restart");
     }
 
 
