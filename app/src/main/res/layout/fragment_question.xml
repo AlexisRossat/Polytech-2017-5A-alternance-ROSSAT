@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.epulapp.projetandroid.QuestionActivity">
+    android:id="@+id/question_fragment">
 
-    <android.support.constraint.Guideline
+
+<android.support.constraint.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline_middle"
@@ -123,7 +122,8 @@
         app:layout_constraintLeft_toLeftOf="@+id/guidelineLeft"
         app:layout_constraintRight_toRightOf="@id/guideline_middle"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginRight="@dimen/marginVeryShort" />
+        android:layout_marginRight="@dimen/marginVeryShort"
+        />
 
     <Button
         android:id="@+id/BtnBottomRight"
@@ -137,7 +137,7 @@
         app:layout_constraintRight_toRightOf="@id/guidelineRight"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginLeft="@dimen/marginVeryShort"
- />
+        />
 
     <Button
         android:id="@+id/BtnTopLeft"
@@ -151,7 +151,7 @@
         app:layout_constraintRight_toRightOf="@id/guideline_middle"
         app:layout_constraintBottom_toTopOf="@id/BtnBottomLeft"
         android:layout_marginRight="@dimen/marginVeryShort"
-         />
+        />
 
     <Button
         android:id="@+id/BtnTopRight"
@@ -191,7 +191,5 @@
         app:layout_constraintRight_toRightOf="@id/guidelineRight"
 
         android:layout_marginBottom="@dimen/marginVeryShort" />
-
-
 
 </android.support.constraint.ConstraintLayout>

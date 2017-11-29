@@ -1,0 +1,91 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <TextView
+        android:id="@+id/Offline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginLeftShort"
+        android:layout_marginStart="@dimen/marginLeftShort"
+        android:layout_marginTop="@dimen/marginShort"
+        android:text="@string/Offline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopLong"
+        android:text="@string/Online"
+        app:layout_constraintLeft_toLeftOf="@+id/Offline"
+        app:layout_constraintTop_toTopOf="@+id/btnAvsB" />
+
+
+    <Button
+        android:id="@+id/btn1vs1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginBottom="@dimen/marginShort"
+        android:layout_marginLeft="@dimen/marginLittle"
+        android:text="@string/_1vs1"
+        app:layout_constraintBottom_toTopOf="@+id/btnAvsB"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight" />
+
+    <Button
+        android:id="@+id/btn1vs1Online"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginTop="@dimen/marginShort"
+        android:text="@string/_1vs1Online"
+        app:layout_constraintLeft_toLeftOf="@+id/guidelineLeft"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineRight"
+        app:layout_constraintTop_toTopOf="@+id/Online" />
+
+    <Button
+        android:id="@+id/btnAvsB"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginTop="@dimen/marginShort"
+        android:text="@string/_AvsB"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="@+id/guidelineLeft"
+        app:layout_constraintRight_toRightOf="@id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@+id/btn1vsIa" />
+
+    <Button
+        android:id="@+id/btn1vsIa"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_marginRight="@dimen/marginLittle"
+        android:text="@string/_1vsIa"
+        app:layout_constraintLeft_toLeftOf="@+id/guidelineLeft"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/Offline" />
+
+
+</android.support.constraint.ConstraintLayout>
