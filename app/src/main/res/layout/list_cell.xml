@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_cell_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/border"
+        android:padding="@dimen/marginVeryShort"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/beer_image"
+            android:layout_width="@dimen/beer_image_width"
+            android:layout_height="@dimen/beer_image_height"
+            android:layout_gravity="left"
+            android:background="@color/lightGrey"
+            android:layout_marginRight="@dimen/marginShort"
+            android:layout_marginLeft="@dimen/marginLittle"
+            app:srcCompat="@drawable/ic_rowing_black_24dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/beer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="2"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                tools:text="MyBeer"></TextView>
+
+            <TextView
+                android:id="@+id/beer_alcool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                tools:text="@string/Abv"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

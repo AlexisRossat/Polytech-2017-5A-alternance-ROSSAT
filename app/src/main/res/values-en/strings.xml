@@ -4,7 +4,7 @@
     <string name="Online">Online</string>
     <string name="Offline">Offline</string>
     <string name="_1vs1">1 vs 1</string>
-    <string name="_1vsIa">1 vs IA</string>
+    <string name="_1vsIa">Beers</string>
     <string name="_AvsB">Team 1 vs Team B</string>
     <string name="_1vs1Online">1 vs 1 online</string>
 
@@ -19,4 +19,13 @@
     <string name="Cat">Cat</string>
     <string name="Horse">Horse</string>
     <string name="Cow">Cow</string>
+
+    <string name="Abv">Abv.</string>
+    <string name="Ibu">Ibu</string>
+    <string name="First_brew">First brewed</string>
+
+    <string name="Food_pairing">Food pairing</string>
+    <string name="Description">Description</string>
+    <string name="Proposed_by">Proposed by</string>
+
 </resources>

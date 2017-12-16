@@ -38,8 +38,17 @@ public class HomeFragment extends Fragment {
         button1vs1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("CREATE", "Click bouton");
+                Log.d("DEBUG_PROJET", "Click bouton 1 vs 1");
                 onButtonClick();
+            }
+        });
+
+        Button button1vsIa = (Button) view.findViewById(R.id.btn1vsIa);
+        button1vsIa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("DEBUG_PROJET", "beer button");
+                onButtonBeers();
             }
         });
 
@@ -60,6 +69,9 @@ public class HomeFragment extends Fragment {
 
     public void onButtonClick() {
         parent.onButtonClick();
+    }
+    public void onButtonBeers() {
+        parent.onButtonBeers();
     }
 
     @Override

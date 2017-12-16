@@ -7,4 +7,7 @@ package com.example.epulapp.projetandroid;
 public interface HomeActivityCallback {
 
     public void onButtonClick();
+
+    public void onButtonBeers();
+    public void onSelectBeer(Beer beer);
 }

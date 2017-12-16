@@ -76,4 +76,39 @@ public class HomeActivity extends AppCompatActivity implements HomeActivityCallb
         fragmentTransaction.addToBackStack("home_fragment");
         fragmentTransaction.commit();
     }
+
+    @Override
+    public void onButtonBeers() {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        BeersListFragment beersListFragment = (BeersListFragment) fragmentManager.findFragmentById(R.id.beers_fragment);
+        fragmentTransaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
+
+        if (beersListFragment == null) {
+            beersListFragment = new BeersListFragment();
+            fragmentTransaction.replace(R.id.main_container, beersListFragment);
+        } else {
+            fragmentTransaction.show(beersListFragment);
+        }
+        fragmentTransaction.addToBackStack("home_fragment");
+        fragmentTransaction.commit();
+    }
+
+    @Override
+    public void onSelectBeer(Beer beer) {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        BeerDetailFragment beerDetailFragment = (BeerDetailFragment) fragmentManager.findFragmentById(R.id.beer_detail_fragment);
+        fragmentTransaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
+
+        if (beerDetailFragment == null) {
+            //beerDetailFragment = new BeerDetailFragment();
+            beerDetailFragment = BeerDetailFragment.newInstance(beer);
+            fragmentTransaction.replace(R.id.main_container, beerDetailFragment);
+        } else {
+            fragmentTransaction.show(beerDetailFragment);
+        }
+        fragmentTransaction.addToBackStack(String.valueOf(R.id.beers_fragment));
+        fragmentTransaction.commit();
+    }
 }

@@ -1,0 +1,196 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/beer_detail_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.epulapp.projetandroid.BeerDetailFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/beer_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginShort"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/beer_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/marginLittle"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Beer name"
+                android:textAppearance="@style/Title1" />
+
+            <TextView
+                android:id="@+id/beer_tagline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/marginVerySmall"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="Tagline"
+                android:textAppearance="@style/Subtitle1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/beer_proposed_by"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/marginIntermediate"
+                android:gravity="center"
+                android:text="Proposed by"
+                android:textAllCaps="true"
+                android:textAppearance="@style/Legend1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/marginShort"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/marginShort"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/First_brew"
+                        android:textAppearance="@style/Title3" />
+                    <TextView
+                        android:id="@+id/beer_first_brew"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="First brew"
+                        android:textAppearance="@style/Body1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/marginShort"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/Abv"
+                        android:textAppearance="@style/Title3" />
+                    <TextView
+                        android:id="@+id/beer_abv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="ABV"
+                        android:textAppearance="@style/Body1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/marginShort"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/Ibu"
+                        android:textAppearance="@style/Title3" />
+                    <TextView
+                        android:id="@+id/beer_ibu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="IBU"
+                        android:textAppearance="@style/Body1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="@dimen/marginIntermediate"
+                android:background="@drawable/dotted_line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginLittle"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Description"
+                android:textAppearance="@style/Title2" />
+
+            <TextView
+                android:id="@+id/beer_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginShort"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Description"
+
+                android:textAppearance="@style/Body1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="@dimen/marginIntermediate"
+                android:background="@drawable/dotted_line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginLittle"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Food pairing"
+
+                android:textAppearance="@style/Title2" />
+
+            <TextView
+                android:id="@+id/beer_food_pairing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginTopLong"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Food_pairing"
+                android:textAppearance="@style/Body1" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">ProjetAndroid</string>
+    <string name="app_name">Beers</string>
     <string name="Online">En ligne</string>
     <string name="Offline">Hors ligne</string>
     <string name="_1vs1">1 contre 1</string>
-    <string name="_1vsIa">contre l\'IA</string>
+    <string name="_1vsIa">Bières</string>
     <string name="_AvsB">Equipe A contre equipe B</string>
     <string name="_1vs1Online">1 contre 1 en ligne</string>
 
@@ -21,6 +21,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Abv">Alc.</string>
+    <string name="Ibu">Ibu</string>
+    <string name="First_brew">Premier brassage</string>
+    <string name="Food_pairing">Nourriture à associer</string>
+    <string name="Description">Description</string>
+    <string name="Proposed_by">Proposé par</string>
 
 
 </resources>

@@ -1,11 +1,44 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/lightGrey</item>
+        <item name="colorPrimaryDark">@color/orange</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="Title1">
+        <item name="android:textSize">@dimen/title1</item>
+        <item name="android:textColor">@color/orange</item>
+    </style>
+
+    <style name="Title2">
+        <item name="android:textSize">@dimen/title2</item>
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="Title3">
+        <item name="android:textSize">@dimen/title3</item>
+        <item name="android:textColor">@color/meddiumGrey</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="Subtitle1">
+        <item name="android:textSize">@dimen/subtitle1</item>
+        <item name="android:textColor">@color/meddiumGrey</item>
+    </style>
+
+    <style name="Legend1">
+        <item name="android:textSize">@dimen/legend1</item>
+        <item name="android:textColor">@color/darkGrey</item>
+    </style>
+
+    <style name="Body1">
+        <item name="android:textSize">@dimen/body1</item>
+        <item name="android:textColor">@color/darkGrey</item>
     </style>
 
 </resources>
