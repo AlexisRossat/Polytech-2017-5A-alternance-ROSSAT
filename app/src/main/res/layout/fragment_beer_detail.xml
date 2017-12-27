@@ -49,7 +49,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@dimen/marginIntermediate"
                 android:gravity="center"
-                android:text="Proposed by"
+                android:text="@string/Proposed_by"
                 android:textAllCaps="true"
                 android:textAppearance="@style/Legend1" />
 
@@ -67,11 +67,13 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/First_brew"
                         android:textAppearance="@style/Title3" />
+
                     <TextView
                         android:id="@+id/beer_first_brew"
                         android:layout_width="match_parent"
@@ -150,7 +152,7 @@
                 android:layout_marginBottom="@dimen/marginLittle"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Description"
+                android:text="@string/Description"
                 android:textAppearance="@style/Title2" />
 
             <TextView
@@ -176,7 +178,7 @@
                 android:layout_marginBottom="@dimen/marginLittle"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Food pairing"
+                android:text="@string/Food_pairing"
 
                 android:textAppearance="@style/Title2" />
 

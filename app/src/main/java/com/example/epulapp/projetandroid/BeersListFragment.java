@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -32,6 +33,7 @@ public class BeersListFragment extends Fragment {
 
     //private OnFragmentInteractionListener mListener;
     private HomeActivityCallback parent;
+    private List<Beer> listBeer;
 
     public BeersListFragment() {
         // Required empty public constructor
@@ -49,38 +51,69 @@ public class BeersListFragment extends Fragment {
     }
 
     @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Beer[] arraylist = listBeer.toArray(new Beer[listBeer.size()]);
+        outState.putParcelableArray("beerList", arraylist);
+        Log.d("DEBUG_PROJET", "onSaveInstanceState");
+    }
+
+   /* @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        someVarA = savedInstanceState.getInt("someVarA");
+        someVarB = savedInstanceState.getString("someVarB");
+    }*/
+
+
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         final View view = inflater.inflate(R.layout.fragment_beers_list, container, false);
         Log.d("DEBUG_PROJET", "Beers fragment on create view");
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BeerService.ENDPOINT)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+        if ((savedInstanceState != null) && (savedInstanceState.getParcelableArray("beerList") != null)) {
+            this.listBeer = savedInstanceState.getParcelableArrayList("beerList");
 
-        BeerService beerService = retrofit.create(BeerService.class);
-        Call<List<Beer>> beerList = beerService.beersList();
-        beerList.enqueue(new Callback<List<Beer>>() {
+            RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(listBeer);
+            final RecyclerView rv = view.findViewById(R.id.beers_list);
+            rv.setLayoutManager(new LinearLayoutManager(getContext()));
+            rv.setAdapter(recyclerViewAdapter);
+        } else {
 
-            @Override
-            public void onResponse(Call<List<Beer>> call, Response<List<Beer>> response) {
-                List<Beer> listBeer = response.body();
-                Log.d("DEBUG_PROJET", listBeer.get(1).getName());
 
-                RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(listBeer);
-                final RecyclerView rv = view.findViewById(R.id.beers_list);
-                rv.setLayoutManager(new LinearLayoutManager(getContext()));
-                rv.setAdapter(recyclerViewAdapter);
-            }
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BeerService.ENDPOINT)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
 
-            @Override
-            public void onFailure(Call<List<Beer>> call, Throwable t) {
+            BeerService beerService = retrofit.create(BeerService.class);
+            Call<List<Beer>> beerList = beerService.beersList();
+            beerList.enqueue(new Callback<List<Beer>>() {
 
-            }
-        });
+                @Override
+                public void onResponse(Call<List<Beer>> call, Response<List<Beer>> response) {
+                    List<Beer> listBeer = response.body();
+                    //this.listBeer = response.body();
+                    setBeerList(listBeer);
+                    RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(listBeer);
+                    final RecyclerView rv = view.findViewById(R.id.beers_list);
+                    rv.setLayoutManager(new LinearLayoutManager(getContext()));
+                    rv.setAdapter(recyclerViewAdapter);
+                }
 
+                @Override
+                public void onFailure(Call<List<Beer>> call, Throwable t) {
+
+                }
+            });
+        }
         return view;
+    }
+
+    public void setBeerList(List<Beer> beerList){
+        this.listBeer = beerList;
     }
 
     @Override

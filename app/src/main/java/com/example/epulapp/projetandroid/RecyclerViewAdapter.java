@@ -115,9 +115,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             }
 
             protected void onPostExecute(Bitmap result) {
-
-                this.beer.setImage(result);
-                beer_image.setImageBitmap(beer.getImage());
+                if(this.beer.getImage() == null){
+                    this.beer.setImage(result);
+                    beer_image.setImageBitmap(beer.getImage());
+                }
             }
         }
     }
